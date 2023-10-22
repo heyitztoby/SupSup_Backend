@@ -6,10 +6,18 @@ const orderSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       required: [true, "Please enter a store ID"],
     },
-    Foods: {
-      type: [mongoose.Schema.Types.ObjectId],
-      required: [true, "Please enter a food"],
-    },
+    Foods: [
+      {
+        FoodID: {
+          type: mongoose.Schema.Types.ObjectId,
+          required: [true, "Please enter a food ID"],
+        },
+        Quantity: {
+          type: Number,
+          required: [true, "Please enter a quantity"],
+        },
+      },
+    ],
     Total: {
       type: String,
       required: [true, "Please enter a total price"],

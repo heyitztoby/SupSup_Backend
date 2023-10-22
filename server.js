@@ -8,6 +8,8 @@ const deliveryLocationRoute = require("./routes/deliveryLocationRoute");
 const messageRoute = require("./routes/messageRoute");
 const foodRoute = require("./routes/foodRoute");
 const orderRoute = require("./routes/orderRoute");
+const reviewRoute = require("./routes/reviewRoute");
+const deliveryFeeRoute = require("./routes/deliveryFeeRoute");
 const errorMiddleware = require("./middleware/errorMiddleware");
 const cors = require("cors");
 
@@ -24,6 +26,8 @@ app.use("/api/deliveryLocation", deliveryLocationRoute);
 app.use("/api/message", messageRoute);
 app.use("/api/food", foodRoute);
 app.use("/api/order", orderRoute);
+app.use("/api/review", reviewRoute);
+app.use("/api/deliveryFee", deliveryFeeRoute);
 
 app.get("/", (req, res) => {
   // throw new Error("FAKE ERROR");

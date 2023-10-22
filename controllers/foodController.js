@@ -23,11 +23,11 @@ const getAllFoods = asyncHandler(async (req, res) => {
   }
 });
 
-// retrieve food by ID
+// retrieve all foods by storeID
 const getFood = asyncHandler(async (req, res) => {
   try {
     const { id } = req.params;
-    const food = await Food.find({ _id: id });
+    const food = await Food.find({ StoreID: id });
     res.status(200).json(food);
   } catch (error) {
     res.status(500);

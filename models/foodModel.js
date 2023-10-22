@@ -11,12 +11,16 @@ const foodSchema = mongoose.Schema(
       required: [true, "Please enter a food name"],
     },
     Price: {
-      type: String,
+      type: Number,
       required: [true, "Please enter a food price"],
     },
     Thumbnail: {
       type: String,
       required: [true, "Please insert a thumbnail"],
+    },
+    Category: {
+      type: String,
+      required: [true, "Please enter a food category"],
     },
   },
   {

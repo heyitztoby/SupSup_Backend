@@ -16,7 +16,7 @@ router.post("/create", createFood);
 // retrieve all foods
 router.get("/getAll", getAllFoods);
 
-// retrieve food by ID
+// retrieve food by storeID
 router.get("/get/:id", getFood);
 
 // update food by ID
